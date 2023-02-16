@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Post = () => {
+
+const SinglePost = () => {
     return (
         <section>
             This is a Post
@@ -8,4 +9,4 @@ const Post = () => {
     );
 };
 
-export default Post;
+export default SinglePost;
