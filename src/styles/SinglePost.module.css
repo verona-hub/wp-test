@@ -1,11 +1,11 @@
 .SinglePost {
     align-content: center;
-    background-color: lightblue;
+    align-items: center;
+    /*background-color: lightpink;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 20px;
+    margin: 50px;
     padding: 50px;
-    width: 500px;
+    width: 80%;
 }

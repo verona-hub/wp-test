@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/SinglePost.module.css'
+import styles from '../styles/SinglePost.module.css';
 
 
 const SinglePost = ({ post }) => {
