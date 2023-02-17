@@ -1,12 +1,18 @@
 import React from 'react';
+import styles from '../styles/SinglePost.module.css'
 
 
-const SinglePost = () => {
+const SinglePost = ({ post }) => {
+
+    console.log(post.content)
+
     return (
-        <section>
-            This is a Post
-        </section>
+        <div className={styles.SinglePost}>
+            <h1>{ post.title.rendered }</h1>
+            { post.excerpt.rendered.replace(/(<([^>]+)>)/gi, "") }
+        </div>
     );
 };
+
 
 export default SinglePost;
