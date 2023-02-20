@@ -10,7 +10,7 @@ const Posts = () => {
 
     const config = {
         method: 'GET',
-        url: 'http://192.168.1.16/wordpress/wp-json/wp/v2/posts',
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL}`,
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
