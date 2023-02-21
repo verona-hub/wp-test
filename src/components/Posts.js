@@ -17,17 +17,19 @@ const Posts = () => {
         }
     };
 
-    const fetchData = async () => {
-        try {
-            const response = await axios(config);
-            setPosts(response.data);
-            console.log(response.data)
-        } catch (err) {
-            console.log(err)
-        }
-    };
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios(config);
+                setPosts(response.data);
+                console.log(response.data)
+            } catch (err) {
+                console.log(err)
+            }
+        };
 
-    fetchData().then();
+        fetchData().then();
+    }, []);
 
 
     return (
