@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styles from '@/styles/Home.module.css'
+import styles2 from '../styles/SinglePost.module.css';
 import axios from 'axios';
-import SinglePost from '@/components/SinglePost';
+import AppState from '../store/AppState';
 
 
 const Posts = () => {
 
-    const [posts, setPosts] = useState([]);
+    const { posts, setPosts } = useContext(AppState);
 
     const config = {
         method: 'GET',
@@ -22,7 +23,6 @@ const Posts = () => {
             try {
                 const response = await axios(config);
                 setPosts(response.data);
-                console.log(response.data)
             } catch (err) {
                 console.log(err)
             }
@@ -35,10 +35,10 @@ const Posts = () => {
     return (
         <section className={styles.Posts}>
             { posts.map(post => (
-                <SinglePost
-                    post={ post }
-                    key={ post.id }
-                />
+                <div className={styles2.SinglePost}>
+                    <h1>{ post.title.rendered }</h1>
+                    { post.excerpt.rendered.replace(/(<([^>]+)>)/gi, "") }
+                </div>
             ))}
         </section>
     );
