@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Home.module.css';
+import styles2 from '../styles/SinglePost.module.css';
 import axios from 'axios';
 
 
@@ -31,10 +32,29 @@ const Posts = () => {
     return (
         <section className={styles.Posts}>
             { posts?.map(post => (
-                <section
-                    post={ post }
-                    key={ post.id }
-                />
+                <div className={styles2.SinglePost} key={post.id}>
+
+                    <h1>{ post.title.rendered }</h1>
+                    { post.excerpt.rendered.replace(/(<([^>]+)>)/gi, "") }
+
+                    {/*<Link*/}
+                    {/*    href={{*/}
+                    {/*        pathname: `/post/[slug]`,*/}
+                    {/*        query: {*/}
+                    {/*            post: post,*/}
+                    {/*            slug: post.slug,*/}
+                    {/*        }*/}
+                    {/*    }}*/}
+                    {/*    as={`/post/${post.slug}`}*/}
+                    {/*>*/}
+                    {/*    <button>Open post...</button>*/}
+                    {/*</Link>*/}
+
+                    {/*<Link href={`/post/${post.slug}`}>*/}
+                    {/*    <button>Open Post</button>*/}
+                    {/*</Link>*/}
+
+                </div>
             ))}
         </section>
     );
