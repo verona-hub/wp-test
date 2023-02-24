@@ -35,7 +35,7 @@ const Posts = () => {
                 <div className={styles2.SinglePost} key={post.id}>
 
                     <h1>{ post.title.rendered }</h1>
-                    { post.excerpt.rendered.replace(/(<([^>]+)>)/gi, "") }
+                    { post.excerpt.rendered.replace(/(<([^>]+)>)/gi, "").replace( /\.|&hellip;/g, '...') }
 
                     {/*<Link*/}
                     {/*    href={{*/}
