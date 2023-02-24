@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styles from '@/styles/SinglePost.module.css';
-import AppState from '../../store/AppState';
 import { useRouter } from 'next/router'
 
 
