@@ -2,7 +2,6 @@
     align-content: center;
     align-items: center;
     border: 2px solid;
-    border-image: linear-gradient(45deg,blue, green, yellow, magenta, red) 1;
     border-image: linear-gradient(45deg,#f5576c, #b490ca, #8fd3f4, #96e6a1, #fda085) 1;
     box-shadow: 1px 1px 15px 0 #b6dcee;
     display: flex;
