@@ -31,10 +31,12 @@ const Posts = () => {
 
     return (
         <section className={styles.Posts}>
-            { posts?.map(post => (
-                <div className={styles2.SinglePost} key={post.id}>
+            { posts
+                .reverse()
+                .map(post => (
+                <div className={styles2.SinglePost} key={ post.id }>
 
-                    <h1>{ post.title.rendered }</h1>
+                    <h2>{ post.title.rendered }</h2>
                     { post.excerpt.rendered.replace(/(<([^>]+)>)/gi, "").replace( /\.|&hellip;/g, '...') }
 
                     {/*<Link*/}

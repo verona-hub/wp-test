@@ -1,10 +1,31 @@
 .SinglePost {
     align-content: center;
     align-items: center;
+    border: 2px solid;
+    border-image: linear-gradient(45deg,blue, green, yellow, magenta, red) 1;
+    border-image: linear-gradient(45deg,#f5576c, #b490ca, #8fd3f4, #96e6a1, #fda085) 1;
+    box-shadow: 1px 1px 15px 0 #b6dcee;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 50px;
-    padding: 50px;
-    width: 80%;
+    padding: 30px;
+    text-align: center;
+    transition: 0.6s;
+    width: 400px;
+}
+
+.SinglePost h2 {
+    margin-bottom: 50px;
+    background: -webkit-linear-gradient(#f5576c, #fda085);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.SinglePost:hover {
+    border-image: linear-gradient(45deg,#b490ca, #8fd3f4, #96e6a1, #fda085, #f5576c) 1;
+    box-shadow: 4px 2px 20px 0 #ea8692;
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(1.075);
 }

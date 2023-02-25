@@ -104,6 +104,10 @@ h1 {
   font-size: 70px;
 }
 
+h2 {
+  font-size: 40px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
